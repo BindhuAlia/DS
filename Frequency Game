@@ -1,0 +1,17 @@
+int LargButMinFreq(int arr[], int n) {
+    map<int,int>m;
+    int ans=0,c=0;
+    for(int i=0;i<n;i++)
+    {
+        m[arr[i]]++;
+    }
+    //reverse(m.begin(),m.end());
+    for(auto it:m)
+    {
+        if(it.second>c)
+        {
+            ans=it.first;
+        }
+    }
+    return ans;
+}
